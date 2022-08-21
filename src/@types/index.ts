@@ -1,4 +1,4 @@
-export * from './rules'
+export * from './rule'
 export * from './applicable'
 export * from './verifieable'
 export * from './replaceable-string'
