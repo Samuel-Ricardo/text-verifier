@@ -1,5 +1,4 @@
-import {IApplicable,IVerifiable} from "../index";
-import { ICaracterRules } from "./caracter-rules";
+import {IApplicable,IVerifiable, ICaracterRules} from "../index";
 
 export interface IRules{
     caracters?: ICaracterRules,
