@@ -17,3 +17,5 @@ export const filterSpecialCaracter = (caracter:string) => {
         caracter === "\\"
       ) {return `\\${caracter}`} else {return caracter}
 }
+
+export const filterSpecialCaracterOrIgnore = (caracter: string, ignore: boolean) => ignore? caracter : filterSpecialCaracter(caracter) 
