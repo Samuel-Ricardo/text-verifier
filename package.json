@@ -1,0 +1,19 @@
+{
+  "name": "text-verifier",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Samuel-Ricardo/text-verifier.git"
+  },
+  "author": "samuel-ricardo <samuelricardoofficial@gmail.com>",
+  "license": "MIT",
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/Samuel-Ricardo/text-verifier/issues"
+  },
+  "homepage": "https://github.com/Samuel-Ricardo/text-verifier#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
