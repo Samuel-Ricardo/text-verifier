@@ -1,5 +1,6 @@
 import { RULE_KEYS } from "@Consts";
 import { ICaracterRules, IRules } from "@Types";
+import { mergeMaps } from "@Utils";
 
 export function verify(content:string, rules:IRules):Map<string, boolean> {
     var results = new Map<string, boolean>();
@@ -15,6 +16,8 @@ export function verify(content:string, rules:IRules):Map<string, boolean> {
     if(fixed_length) results.set(RULE_KEYS.fixed_length, content.length === fixed_length)
     if(max_length) results.set(RULE_KEYS.max_length, content.length <= max_length)
     if(min_length) results.set(RULE_KEYS.min_length, content.length >= min_length)
+
+    if(caracters) results = mergeMaps(verifyCaractersRules(caracters, content), results)
 
     return results;
 }
