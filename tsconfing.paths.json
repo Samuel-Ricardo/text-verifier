@@ -4,7 +4,8 @@
         "paths": {
             "@Types": ["@types/index.ts", "@types"],
             "@Consts": ["consts/index.ts"],
-            "@Utils": ["utils/index.ts"]
+            "@Utils": ["utils/index.ts"],
+            "@Verifier": ["verifier/index.ts", "verifier/*, verifier"]
         }
     }
 }
