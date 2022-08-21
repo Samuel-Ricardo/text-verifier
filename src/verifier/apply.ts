@@ -1,5 +1,6 @@
 import { RULE_KEYS } from "@Consts";
 import { IApplyResult, ICaracterRules, IRules } from "@Types";
+import { mergeMaps } from "@Utils";
 import { verify, verifyCaractersRules } from './verify';
 
 export function apply(rules: IRules, content:string): IApplyResult {
@@ -8,6 +9,7 @@ export function apply(rules: IRules, content:string): IApplyResult {
         if(!result.get(RULE_KEYS.fixed_length)) content = content.slice(0,rules.fixed_length);
         if(!result.get(RULE_KEYS.max_length)) content = content.slice(0, rules.max_length);
         
+        if(rules.caracters) mergeMaps(applyCaracterRules(rules.caracters, content, result).matchs, result)
         
         return {result: content, matchs: result}
     } catch (error) {
