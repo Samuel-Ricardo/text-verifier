@@ -1,7 +1,7 @@
 import { ICaracterRules, IRules, IVerifier } from '@Types';
 import { IFormat } from '../@types/rule/format';
 import { apply } from './apply';
-import { verify } from './verify';
+import { verify, verifyCaractersRules } from './verify';
 export function getVerifier(rules: IRules): IVerifier<IRules> {
     return {
         rule: rules,
@@ -13,10 +13,7 @@ export function getVerifier(rules: IRules): IVerifier<IRules> {
 export function getCaracterVerifier(rules: ICaracterRules): IVerifier<ICaracterRules> {
     return {
         rule: rules,
-        verify(content) {
-            
-            
-        },
+        verify: content => verifyCaractersRules(rules, content),
         apply(content) {
 
         }
