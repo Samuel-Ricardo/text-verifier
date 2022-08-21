@@ -23,7 +23,7 @@ export function getCaracterVerifier(rules: ICaracterRules): IVerifier<ICaracterR
 export function getFormatVerifier(rules: IFormat): IVerifier<IFormat> {
     return {
         rule: rules,
-        verify: content => verifyFormatRules(rules, content),
+        verify: content => verifyFormatRules(rules, content) 
         apply(content) {
 
         }
