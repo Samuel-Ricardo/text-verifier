@@ -25,3 +25,9 @@ export const filterEspecialCaracters = (caracter:string[]) => caracter.map((cara
 export const filterSpecialCaractersAndIgnore = (caracters:string, ignore: string) => {
  caracters.split('').map((caracter) => caracter === ignore ? caracter : filterSpecialCaracter(caracter))
 }
+
+export const filterSpecialCaractersOfStringOrIgnore = (caracters:string, ignore: string[]) => {
+    return caracters.split('')
+    .map(caracter => ignore.includes(caracter) ? caracter : filterSpecialCaracter(caracter))
+    .reduce((previus, current) => previus.concat(current))
+}
