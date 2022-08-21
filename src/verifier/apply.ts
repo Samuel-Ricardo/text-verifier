@@ -4,7 +4,6 @@ import { verify } from "./verify";
 
 export function apply(rules: IRules, content:string): IApplyResult {
     const result = verify(content, rules);
-
     try {
         if(!result.get(RULE_KEYS.fixed_length)) content = content.slice(0,rules.fixed_length);
         if(!result.get(RULE_KEYS.max_length)) content = content.slice(0, rules.max_length);
