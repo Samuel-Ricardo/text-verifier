@@ -15,5 +15,8 @@
   "homepage": "https://github.com/Samuel-Ricardo/text-verifier#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "typescript": "^4.7.4"
   }
 }
