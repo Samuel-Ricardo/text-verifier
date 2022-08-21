@@ -3,7 +3,8 @@
         "baseUrl": "src",
         "paths": {
             "@Types": ["@types/index.ts", "@types"],
-            "@Consts": ["consts/index.ts"]
+            "@Consts": ["consts/index.ts"],
+            "@Utils": ["utils/index.ts"]
         }
     }
 }
