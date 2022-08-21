@@ -1,7 +1,7 @@
 import {IApplicable,IVerifiable} from "../index";
 import { ICaracterRules } from "./caracter-rules";
 
-export interface IRules extends IVerifiable, IApplicable {
+export interface IRules{
     caracters?: ICaracterRules,
     min_length?: number,
     fixed_length?: number,
