@@ -18,6 +18,7 @@ export function verify(content:string, rules:IRules):Map<string, boolean> {
     if(min_length) results.set(RULE_KEYS.min_length, content.length >= min_length)
 
     if(caracters) results = mergeMaps(verifyCaractersRules(caracters, content), results)
+    if(format) results = mergeMaps(verifyFormatRules(format, content), results)
 
     return results;
 }
