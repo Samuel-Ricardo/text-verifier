@@ -1,6 +1,6 @@
 import { RULE_KEYS } from "@Consts";
-import { ICaracterRules, IRules } from "@Types";
-import { mergeMaps } from "@Utils";
+import { ICaracterRules, IFormat, IRules } from "@Types";
+import { filterSpecialCaractersOfStringOrIgnore, mergeMaps } from "@Utils";
 
 export function verify(content:string, rules:IRules):Map<string, boolean> {
     var results = new Map<string, boolean>();
@@ -35,4 +35,24 @@ export function verifyCaractersRules (rules: ICaracterRules, content: string){
     }
 
     return result;
+}
+
+export function verifyFormatRules (format: IFormat, content: string) {
+    const results = new Map<string, boolean>();
+    if(!format) return results;
+
+    var model = filterSpecialCaractersOfStringOrIgnore(format.model, format.string_to_replace.map(replace => replace.key))
+    content.trim();
+
+    format.string_to_replace.forEach(replace => {
+        var this_regex = `[`
+            replace.value.forEach(rule => this_regex = this_regex.concat(rule.apply()))
+        this_regex = this_regex.concat(']')
+        model = model.replace(replace.key,this_regex)
+    })
+
+    const match = content.match(RegExp(`^${model}$`))
+
+    results.set(RULE_KEYS.format, match ? match.length > 0 : false)
+    return results
 }
