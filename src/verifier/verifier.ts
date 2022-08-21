@@ -5,6 +5,7 @@ export function getVerifier(rules: IRules): IVerifier<IRules> {
         rule: rules,
         verify(content) {
             getCaracterVerifier(this.rule.caracters!)
+            getFormatVerifier(this.rule.format!)
         },
         apply(content) {
 
