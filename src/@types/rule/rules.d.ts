@@ -1,5 +1,5 @@
 import { IApplicable } from "../applicable";
-import { ICaracterRules } from "../caracter-rules";
+import { ICaracterRules } from "./caracter-rules";
 import { IVerifiable } from "../verifieable";
 
 export interface IRules extends IVerifiable, IApplicable {
