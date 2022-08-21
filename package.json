@@ -14,6 +14,7 @@
   },
   "homepage": "https://github.com/Samuel-Ricardo/text-verifier#readme",
   "scripts": {
+    "start": "ts-node src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
