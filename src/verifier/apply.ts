@@ -17,6 +17,6 @@ export function apply(rules: IRules, content:string): IApplyResult {
 
         return {result: content, matchs: result}
     } catch (error) {
-        return {matchs: new Map<string, boolean>().set("ERROR - "+error,true), result: content}
+        return {matchs: new Map<string, boolean>().set("ERROR",true), result: content}
     }
 }
