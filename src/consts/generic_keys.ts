@@ -1,3 +1,4 @@
 export const GENERIC_KEYS = {
-    error: (err:Error | string) => `ERROR - ${err}`
+    err: (err:Error | string) => `ERROR - ${err}`,
+    ERROR:"ERROR"
 }
