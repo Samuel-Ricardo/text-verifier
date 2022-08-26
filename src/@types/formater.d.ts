@@ -13,3 +13,7 @@ export interface IFormater {
     ALLOW_SPECIAL_CHARACTER?: (caracters: string[]) => string
 }
 
+export type IGroupProps = {
+    content: string,
+    range: IRange<number>
+}
