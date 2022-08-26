@@ -4,7 +4,7 @@ export interface IFormaterRules {
     GROUP?: IGroupProps
     ALLOW_LETTER?: IAllowLetterProps
     ALLOW_NUMBER?: AllowNumberProps
-    ALLOW_SPECIAL_CHARACTER?: {caracters: string[]}
+    ALLOW_SPECIAL_CHARACTER?: IAllowSpecialCharacterProps
 }
 export interface IFormater {
     GROUP?: (content: string, range: IRange<number>) => string
@@ -25,4 +25,8 @@ export type IAllowLetterProps = {
 
 export type AllowNumberProps = {
     numbers: IRange<number> | number
+}
+
+export type IAllowSpecialCharacterProps = {
+    caracters: string[]
 }
