@@ -7,10 +7,11 @@ export interface IFormaterRules {
     ALLOW_LETTER?: IAllowLetterProps
     ALLOW_NUMBER?: IAllowNumberProps
     ALLOW_SPECIAL_CHARACTER?: IAllowSpecialCharacterProps
+    format:() => string
 }
 export interface IFormater {
-    GROUP?: (content: string, groupes_range: IRange<number>[]) => string
-    ALLOW_LETTER?: (letters: IRange<string> | string, allowUppercase: boolean) => string
-    ALLOW_NUMBER?: (numbers: IRange<number> | number) => string
-    ALLOW_SPECIAL_CHARACTER?: (caracters: string[]) => string
+    GROUP?: (props: IGroupProps) => string
+    ALLOW_LETTER?: (props: IAllowLetterProps) => string
+    ALLOW_NUMBER?: (props: IAllowNumberProps) => string
+    ALLOW_SPECIAL_CHARACTER?: (props: IAllowSpecialCharacterProps) => string
 }
