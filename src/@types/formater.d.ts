@@ -7,7 +7,7 @@ export interface IFormaterRules {
     ALLOW_LETTER?: IAllowLetterProps
     ALLOW_NUMBER?: IAllowNumberProps
     ALLOW_SPECIAL_CHARACTER?: IAllowSpecialCharacterProps
-    format:() => string
+    apply:() => string
 }
 export interface IFormater {
     GROUP?: (props: IGroupProps) => string
