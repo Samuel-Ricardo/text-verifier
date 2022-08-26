@@ -1,4 +1,4 @@
 export type IGroupProps = {
     content: string,
-    range: IRange<number>
+    groupes_range: IRange<number>[]
 }
