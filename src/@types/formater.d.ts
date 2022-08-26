@@ -2,7 +2,7 @@ import { IRange } from './range';
 import { apply } from '../verifier/apply';
 export interface IFormaterRules {
     GROUP?: IGroupProps
-    ALLOW_LETTER?: {letters: IRange<string> | string, allowUppercase: boolean}
+    ALLOW_LETTER?: IAllowLetterProps
     ALLOW_NUMBER?: {numbers: IRange<number> | number}
     ALLOW_SPECIAL_CHARACTER?: {caracters: string[]}
 }
@@ -16,4 +16,9 @@ export interface IFormater {
 export type IGroupProps = {
     content: string,
     range: IRange<number>
+}
+
+export type IAllowLetterProps = {
+    letters: IRange<string> | string
+    allowUppercase: boolean
 }
