@@ -1,3 +1,4 @@
+export * from './props'
 export * from './rule'
 export * from './key'
 export * from './range'
