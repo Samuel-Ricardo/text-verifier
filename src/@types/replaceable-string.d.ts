@@ -1,6 +1,6 @@
-import { IFormater } from "./formater";
+import { IFormaterRules } from "./formater";
 
 export interface IReplaceableString {
     key:string,
-    value: IFormater[]
+    value: IFormaterRules[]
 }
