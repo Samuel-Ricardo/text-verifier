@@ -5,7 +5,15 @@ export function format(content:string, rules:IFormaterRules){
 }
 
 export function getFormater():IFormater {
-
+    return {
+        ALLOW_LETTER({letters, allowUppercase}){
+            return letters instanceof Array? 
+                letters.reduce((previus, current) => previus.trim().concat(current.trim()))
+            :
+                allowUppercase ? `${letters.init.toLowerCase()}-${letters.end.toLowerCase()}${letters.init.toUpperCase()}-${letters.end.toUpperCase()}` : `${letters.init}-${letters.end}`
+            
+        }
+    }
 }
 
     ALLOW_LETTER?: (props: IAllowLetterProps) => string
