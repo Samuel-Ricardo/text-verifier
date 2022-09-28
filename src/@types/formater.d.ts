@@ -1,6 +1,6 @@
 import { IRange } from './range';
 import { apply } from '../verifier/apply';
-import {IGroupProps, IAllowLetterProps, IAllowNumberProps, IAllowSpecialCharacterProps} from './index'
+import { IAllowLetterProps, IAllowNumberProps, IAllowSpecialCharacterProps, IGroupProps } from './props';
 
 export interface IFormaterRules {
     GROUP?: IGroupProps
